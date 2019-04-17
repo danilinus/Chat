@@ -1,0 +1,7 @@
+D:\Projects\Chat\ServerChat\bin\Debug\ServerChat.exe.config
+D:\Projects\Chat\ServerChat\bin\Debug\ServerChat.exe
+D:\Projects\Chat\ServerChat\bin\Debug\ServerChat.pdb
+D:\Projects\Chat\ServerChat\obj\Debug\ServerChat.csprojAssemblyReference.cache
+D:\Projects\Chat\ServerChat\obj\Debug\ServerChat.csproj.CoreCompileInputs.cache
+D:\Projects\Chat\ServerChat\obj\Debug\ServerChat.exe
+D:\Projects\Chat\ServerChat\obj\Debug\ServerChat.pdb
