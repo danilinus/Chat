@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,25 +52,42 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="110dp" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layoutDirection="rtl">
+        android:background="@color/colorPrimary">
 
-        <Button
-            android:id="@+id/send_btn"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_margin="10dp"
-            android:text="Send"/>
+        <ImageButton
+            android:id="@+id/smile_btn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="3dp"
+            android:layout_margin="8dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/image_smile"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
 
         <EditText
             android:id="@+id/txt_send"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layoutDirection="ltr"/>
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:maxHeight="200dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginEnd="52dp"/>
+
+        <ImageButton
+            android:id="@+id/send_btn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="3dp"
+            android:layout_margin="8dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/image_enter"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
 
 
 </RelativeLayout>
