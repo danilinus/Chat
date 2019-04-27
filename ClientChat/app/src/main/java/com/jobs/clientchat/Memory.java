@@ -1,19 +1,24 @@
 package com.jobs.clientchat;
 
+import android.support.v4.view.ViewPager;
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-public final class Memory {
+final class Memory {
 
-    public static Socket socket;
-    public static PrintWriter mBufferOut;
-    public static BufferedReader mBufferIn;
+    static MainViewPager viewPager;
 
-    public static int port = 8888;
+    static Socket socket;
+    static PrintWriter mBufferOut;
+    static BufferedReader mBufferIn;
 
-    public static void SendMessage(final String message) {
+    static int port = 8888;
+
+    static void SendMessage(final String message) {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -23,7 +28,7 @@ public final class Memory {
         }).start();
     }
 
-    final public static String readString() {
+    static String readString() {
         int anzahlZeichen = 0;
         String nachricht = "";
         try {
@@ -31,6 +36,7 @@ public final class Memory {
             anzahlZeichen = mBufferIn.read(buffer, 0, buffer.length);
             nachricht = new String(buffer, 0, anzahlZeichen);
         } catch (IOException e) {
+            Log.e("ReadStringError", e.getMessage());
         }
         return nachricht;
     }

@@ -7,87 +7,10 @@
     android:orientation="vertical"
     android:background="@color/colorPrimaryDark">
 
-    <LinearLayout
+
+    <com.jobs.clientchat.MainViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="ip:" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layoutDirection="rtl">
-
-            <Button
-                android:id="@+id/ip_btn"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_margin="10dp"
-                android:text="Connect"/>
-
-            <EditText
-                android:id="@+id/ip_txt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="192.168.1.4"
-                android:layout_margin="10dp"
-                android:layoutDirection="ltr"/>
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/messages"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="110dp" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary">
-
-        <ImageButton
-            android:id="@+id/smile_btn"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:padding="3dp"
-            android:layout_margin="8dp"
-            android:background="?selectableItemBackgroundBorderless"
-            android:src="@drawable/image_smile"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"/>
-
-        <EditText
-            android:id="@+id/txt_send"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxHeight="200dp"
-            android:layout_marginStart="52dp"
-            android:layout_marginEnd="52dp"/>
-
-        <ImageButton
-            android:id="@+id/send_btn"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:padding="3dp"
-            android:layout_margin="8dp"
-            android:background="?selectableItemBackgroundBorderless"
-            android:src="@drawable/image_enter"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"/>
-    </RelativeLayout>
-
+        android:layout_height="match_parent"/>
 
 </RelativeLayout>
