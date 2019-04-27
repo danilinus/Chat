@@ -1,22 +1,43 @@
 package com.jobs.clientchat;
 
-import android.support.v4.view.ViewPager;
 import android.util.Log;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
 
 final class Memory {
 
-    static MainViewPager viewPager;
+    static MainViewPager mainViewPager;
+    static MessagesViewPager messagesViewPager;
 
     static Socket socket;
     static PrintWriter mBufferOut;
     static BufferedReader mBufferIn;
 
+    static boolean connected = false;
+
+    static String host = "192.168.1.4";
     static int port = 8888;
+
+    static boolean TryConnected() {
+        try {
+            if (socket != null)
+                if (socket.isConnected()) socket.close();
+            socket = new Socket(host, port);
+            mBufferOut = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())), true);
+            mBufferIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            SendMessage(android.os.Build.MODEL);
+            connected = true;
+        } catch (Exception ex) {
+            connected = false;
+        }
+        return connected;
+    }
 
     static void SendMessage(final String message) {
         new Thread(new Runnable() {

@@ -11,16 +11,13 @@ public class MessagesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_messages, container, false);
-        view.findViewById(R.id.chat).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(Memory.viewPager != null) {
-                    Memory.viewPager.setScrollDurationFactor(2);
-                    Memory.viewPager.setCurrentItem(1);
-                    Memory.viewPager.setScrollDurationFactor(0.5f);
-                }
-            }
-        });
+        Memory.messagesViewPager = view.findViewById(R.id.messages_viewpager);
+        Memory.messagesViewPager.setOffscreenPageLimit(2);
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
+        adapter.addFragment(new MessagesSettingsFragment());
+        adapter.addFragment(new MessagesUsersFragment());
+        Memory.messagesViewPager.setAdapter(adapter);
+        Memory.messagesViewPager.setCurrentItem(1);
         return view;
     }
 }

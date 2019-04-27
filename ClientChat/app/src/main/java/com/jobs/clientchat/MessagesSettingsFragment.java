@@ -6,12 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class AccordFragment extends Fragment {
+public class MessagesSettingsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_accord, container, false);
+        final View view = inflater.inflate(R.layout.fragment_messages_settings, container, false);
 
         return view;
     }
 }
+

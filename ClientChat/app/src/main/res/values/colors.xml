@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#212121</color>
     <color name="colorAccent">#666</color>
     <color name="colorText">#FFF</color>
+    <color name="colorOnline">#4CAF50</color>
+    <color name="colorLocal">#FF9800</color>
+    <color name="colorOff">#F44336</color>
 </resources>
