@@ -1,5 +1,6 @@
 package com.jobs.clientchat;
 
+import android.animation.ObjectAnimator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Memory.mainViewPager = findViewById(R.id.main_viewpager);
         Memory.mainViewPager.setScrollDurationFactor(0.5f);
         Memory.mainViewPager.setOffscreenPageLimit(2);
@@ -44,7 +44,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }).start();
-
-
     }
 }

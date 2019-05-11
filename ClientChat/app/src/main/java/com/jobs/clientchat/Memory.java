@@ -1,5 +1,6 @@
 package com.jobs.clientchat;
 
+import android.graphics.drawable.GradientDrawable;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -19,9 +20,11 @@ final class Memory {
     static PrintWriter mBufferOut;
     static BufferedReader mBufferIn;
 
+    static GradientDrawable CirclePoint;
+
     static boolean connected = false;
 
-    static String host = "192.168.1.4";
+    static String host = "192.168.1.7";
     static int port = 8888;
 
     static boolean TryConnected() {
